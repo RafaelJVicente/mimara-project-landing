@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg"/>
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico"/>
+
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Mimara — Nutrición + Entrenamiento + Bienestar</title>
+
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Tipografías -->
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+    <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@500;600&display=swap"
+            rel="stylesheet"
+    />
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ["Inter", "system-ui", "Segoe UI", "Roboto", "Arial", "sans-serif"],
+                        serif: ["Playfair Display", "ui-serif", "Georgia", "serif"],
+                    },
+                    colors: {
+                        mimara: {
+                            primary: "#6F8A7A", // verde principal
+                            soft: "#A3B1A1",    // verde suave
+                        },
+                        base: "#EAE6DF",      // beige base
+                        textmain: "#4F4F4F",  // gris texto
+                        ink: "#24312B",       // (solo por si lo usabas en bordes/sombras)
+                    },
+                    boxShadow: {
+                        soft: "0 14px 40px rgba(0,0,0,.08)",
+                    },
+                },
+            },
+        };
+    </script>
+
+    <style>
+        :root {
+            --section-pad: clamp(3.5rem, 6vw, 6rem);
+        }
+    </style>
+</head>
+
+<body class="bg-base text-textmain font-sans antialiased">
+<!-- HERO -->
+<header class="relative overflow-hidden bg-base">
+    <div class="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(111,138,122,.22),transparent_55%)]"></div>
+
+    <div class="relative mx-auto max-w-6xl px-6 pt-16 pb-14 md:pt-24 md:pb-20">
+        <div class="flex items-center justify-center">
+            <img src="assets/mimara-logo.svg" alt="Mimara" class="h-20 md:h-28 lg:h-32"/>
+        </div>
+
+        <h1 class="mt-12 text-center font-serif text-3xl leading-tight text-ink md:text-5xl md:leading-tight">
+            Pierde peso de forma sostenible<br class="hidden sm:block"/>
+            sin vivir a dieta
+        </h1>
+
+        <p class="mx-auto mt-6 max-w-2xl text-center text-textmain/80 leading-relaxed">
+            Un método para aprender a comer, moverte y cuidarte sin extremos,
+            con un plan que encaja contigo y que puedes mantener en el tiempo.
+        </p>
+
+        <div class="mt-10 flex justify-center">
+            <a
+                    href="#metodo"
+                    class="inline-flex items-center justify-center rounded-xl bg-mimara-primary px-8 py-3 text-sm font-semibold text-white shadow-soft transition hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-mimara-primary/40"
+            >
+                Conocer el método
+            </a>
+        </div>
+    </div>
+
+    <!-- franja inferior -->
+    <div class="h-24 bg-mimara-soft/45 md:h-28"></div>
+</header>
+
+<!-- SECCIÓN 2 -->
+<section id="metodo" class="bg-mimara-soft/40">
+    <div class="mx-auto max-w-6xl px-6" style="padding-top: var(--section-pad); padding-bottom: var(--section-pad);">
+        <div class="grid items-center gap-10 md:grid-cols-2 md:gap-14">
+            <div>
+                <h2 class="font-serif text-4xl leading-tight text-ink md:text-5xl">
+                    Cuando entiendes tu cuerpo,<br/>
+                    cuidarte deja de ser una lucha
+                </h2>
+
+                <p class="mt-6 text-textmain/85 leading-relaxed">
+                    Mimara es un enfoque efectivo para perder peso de forma óptima, aprendiendo a comer,
+                    moverte y cuidarte sin limitaciones ni “todo o nada”.
+                </p>
+                <p class="mt-4 text-textmain/85 leading-relaxed">
+                    Un método para personas cansadas de empezar de cero: aquí construimos hábitos reales y un
+                    estilo de vida saludable que puedas mantener.
+                </p>
+            </div>
+
+            <div class="relative">
+                <div class="aspect-[16/10] overflow-hidden rounded-3xl shadow-soft">
+                    <img
+                            src="assets/section2.webp"
+                            alt="Mimara — método"
+                            class="h-full w-full object-cover"
+                            loading="lazy"
+                    />
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- NIVELES DE ACOMPAÑAMIENTO -->
+<section class="bg-base">
+    <div class="mx-auto max-w-6xl px-6"
+         style="padding-top: var(--section-pad); padding-bottom: calc(var(--section-pad) * .9);">
+        <h2 class="text-center font-serif text-4xl text-ink md:text-5xl">
+            Un mismo método, distintos niveles<br class="hidden sm:block"/>
+            de acompañamiento
+        </h2>
+
+        <div class="mt-12 grid gap-7 md:grid-cols-3">
+            <!-- Card 1 -->
+            <article
+                    class="overflow-hidden rounded-2xl border border-black/10 bg-white shadow-soft h-full flex flex-col">
+                <div class="aspect-[16/10] overflow-hidden">
+                    <img src="assets/card-1.jpg" alt="Autonomía Guiada" class="h-full w-full object-cover"
+                         loading="lazy"/>
+                </div>
+
+                <div class="p-6 flex-1 flex flex-col">
+                    <h3 class="font-serif text-2xl text-ink">Autonomía Guiada</h3>
+                    <p class="mt-3 text-textmain/85 leading-relaxed">
+                        Para avanzar a tu ritmo, aprender y aplicar con claridad. Recursos, estructura y soporte
+                        para que ganes confianza.
+                    </p>
+
+                    <a
+                            href="#planes"
+                            class="mt-auto inline-flex w-fit rounded-xl bg-mimara-soft/55 px-5 py-2.5 text-sm font-semibold text-ink transition hover:bg-mimara-soft/70"
+                    >
+                        Ver el plan
+                    </a>
+                </div>
+            </article>
+
+            <!-- Card 2 -->
+            <article
+                    class="overflow-hidden rounded-2xl border border-black/10 bg-white shadow-soft h-full flex flex-col">
+                <div class="aspect-[16/10] overflow-hidden">
+                    <img src="assets/card-2.jpg" alt="Seguimiento Semanal" class="h-full w-full object-cover"
+                         loading="lazy"/>
+                </div>
+
+                <div class="p-6 flex-1 flex flex-col">
+                    <h3 class="font-serif text-2xl text-ink">Seguimiento Semanal</h3>
+                    <p class="mt-3 text-textmain/85 leading-relaxed">
+                        Para quienes quieren avanzar con apoyo continuo. Revisamos, ajustamos y mantenemos el foco
+                        sin presión.
+                    </p>
+
+                    <a
+                            href="#planes"
+                            class="mt-auto inline-flex w-fit rounded-xl bg-mimara-soft/55 px-5 py-2.5 text-sm font-semibold text-ink transition hover:bg-mimara-soft/70"
+                    >
+                        Saber más
+                    </a>
+                </div>
+            </article>
+
+            <!-- Card 3 -->
+            <article
+                    class="overflow-hidden rounded-2xl border border-black/10 bg-white shadow-soft h-full flex flex-col">
+                <div class="aspect-[16/10] overflow-hidden">
+                    <img src="assets/card-3.jpg" alt="Sesiones de acompañamiento" class="h-full w-full object-cover"
+                         loading="lazy"/>
+                </div>
+
+                <div class="p-6 flex-1 flex flex-col">
+                    <h3 class="font-serif text-2xl text-ink">Sesiones de acompañamiento</h3>
+                    <p class="mt-3 text-textmain/85 leading-relaxed">
+                        Para desbloquear puntos clave con una estrategia clara. Sesiones 1:1 centradas en acción,
+                        hábitos y adherencia.
+                    </p>
+
+                    <a
+                            href="#planes"
+                            class="mt-auto inline-flex w-fit rounded-xl bg-mimara-soft/55 px-5 py-2.5 text-sm font-semibold text-ink transition hover:bg-mimara-soft/70"
+                    >
+                        Reservar
+                    </a>
+                </div>
+            </article>
+        </div>
+    </div>
+</section>
+
+<!-- COCINA / MANIFIESTO -->
+<section class="relative overflow-hidden">
+    <div class="absolute inset-0">
+        <img src="assets/bg-kitchen.jpg" alt="" class="h-full w-full object-cover" loading="lazy"/>
+        <div class="absolute inset-0 bg-base/75"></div>
+    </div>
+
+    <div class="relative mx-auto max-w-6xl px-6"
+         style="padding-top: var(--section-pad); padding-bottom: var(--section-pad);">
+        <div class="grid gap-10 md:grid-cols-2 md:gap-14">
+            <div>
+                <h2 class="font-serif text-4xl text-ink md:text-5xl">Una forma diferente<br/>de cuidarte</h2>
+
+                <p class="mt-6 text-textmain/85 leading-relaxed">
+                    Mimara no es un “método mágico”. Es acompañamiento, práctica y constancia para que tu proceso
+                    sea sostenible y realista.
+                </p>
+                <p class="mt-4 text-textmain/85 leading-relaxed">
+                    No buscamos perfección: buscamos dirección. Aprender a cuidarte con flexibilidad, sin culpas
+                    y con herramientas que encajen con tu día a día.
+                </p>
+                <p class="mt-4 text-textmain/85 leading-relaxed">
+                    Lo importante no es hacerlo “perfecto”, sino hacerlo posible.
+                </p>
+            </div>
+
+            <div class="rounded-2xl border border-black/10 bg-white/70 p-7 shadow-soft backdrop-blur-sm">
+                <h3 class="font-serif text-2xl text-ink">En Mimara priorizamos</h3>
+                <ul class="mt-5 space-y-3 text-textmain/90">
+                    <li class="flex gap-3">
+                        <span class="mt-1.5 inline-block h-2 w-2 rounded-full bg-mimara-primary"></span>
+                        <span>Escuchar antes que imponer.</span>
+                    </li>
+                    <li class="flex gap-3">
+                        <span class="mt-1.5 inline-block h-2 w-2 rounded-full bg-mimara-primary"></span>
+                        <span>Personalizar con evidencia y contexto.</span>
+                    </li>
+                    <li class="flex gap-3">
+                        <span class="mt-1.5 inline-block h-2 w-2 rounded-full bg-mimara-primary"></span>
+                        <span>Hábitos sostenibles (sin extremos).</span>
+                    </li>
+                    <li class="flex gap-3">
+                        <span class="mt-1.5 inline-block h-2 w-2 rounded-full bg-mimara-primary"></span>
+                        <span>Progreso medible con calma.</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- 2 BLOQUES (COMIDA + ENTRENO) -->
+<section class="bg-base">
+    <div class="mx-auto max-w-6xl px-6"
+         style="padding-top: calc(var(--section-pad) * .9); padding-bottom: var(--section-pad);">
+        <div class="grid gap-10 md:grid-cols-2 md:gap-14">
+            <article class="rounded-3xl bg-white shadow-soft overflow-hidden">
+                <div class="aspect-[4/3]">
+                    <img src="assets/photo-food.jpg" alt="Nutrición" class="h-full w-full object-cover" loading="lazy"/>
+                </div>
+                <div class="p-7">
+                    <h3 class="font-serif text-3xl text-ink">Comida sin culpa</h3>
+                    <p class="mt-3 text-textmain/85 leading-relaxed">
+                        Aprende a comer con libertad: estructura, elecciones inteligentes y flexibilidad para
+                        disfrutar sin perder el rumbo.
+                    </p>
+                </div>
+            </article>
+
+            <article class="rounded-3xl bg-white shadow-soft overflow-hidden">
+                <div class="aspect-[4/3]">
+                    <img src="assets/photo-training.jpg" alt="Entrenamiento" class="h-full w-full object-cover"
+                         loading="lazy"/>
+                </div>
+                <div class="p-7">
+                    <h3 class="font-serif text-3xl text-ink">Entrena para tu vida</h3>
+                    <p class="mt-3 text-textmain/85 leading-relaxed">
+                        Movimiento que suma: fuerza, energía y constancia. Planes realistas para que el ejercicio
+                        sea un aliado, no una carga.
+                    </p>
+                </div>
+            </article>
+        </div>
+    </div>
+</section>
+
+<!-- PLANES -->
+<section id="planes" class="bg-mimara-primary">
+    <div class="mx-auto max-w-6xl px-6"
+         style="padding-top: var(--section-pad); padding-bottom: calc(var(--section-pad) * .9);">
+        <h2 class="text-center font-serif text-4xl text-white md:text-5xl">
+            Elige cómo quieres trabajar con Mimara
+        </h2>
+
+        <div class="mt-12 grid gap-8 md:grid-cols-3">
+            <!-- Plan 1 -->
+            <article class="rounded-2xl border border-white/20 bg-white/10 p-7 text-white shadow-soft backdrop-blur-sm">
+                <h3 class="font-serif text-2xl">Programa Base</h3>
+                <p class="mt-2 text-lg font-semibold">249€</p>
+
+                Para quienes quiran aplicar el metodo por su cuenta.
+
+                <ul class="mt-6 space-y-3 text-white/90">
+                Incluye:
+                    <li class="flex gap-3"><span class="mt-1.5 h-2 w-2 rounded-full bg-white/70"></span><span>Acceso al método durante 30 días.</span>
+                    </li>
+                    <li class="flex gap-3"><span class="mt-1.5 h-2 w-2 rounded-full bg-white/70"></span><span>Nutrición: pautas claras y aplicables.</span>
+                    </li>
+                    <li class="flex gap-3"><span class="mt-1.5 h-2 w-2 rounded-full bg-white/70"></span><span>Movimiento y hábitos adaptados a la vida real.</span>
+                    </li>
+                    <li class="flex gap-3"><span class="mt-1.5 h-2 w-2 rounded-full bg-white/70"></span><span>Guías prácticas y ejemplos.</span>
+                    </li>
+                </ul><br>
+                No incluye seguimiento.
+
+                <a
+                        href="#contacto"
+                        class="mt-8 inline-flex w-full justify-center rounded-xl bg-white px-5 py-3 text-sm font-semibold text-mimara-primary transition hover:bg-white/90"
+                >
+                    Acceder al método
+                </a>
+            </article>
+
+            <!-- Plan 2 -->
+            <article
+                    class="relative rounded-2xl border-2 border-white bg-white/15 p-7 text-white shadow-soft backdrop-blur-sm scale-105">
+                <div class="absolute -top-3 left-1/2 -translate-x-1/2">
+            <span class="rounded-full bg-white px-4 py-1 text-xs font-semibold tracking-wide text-mimara-primary">
+              SUGERIDO
+            </span>
+                </div>
+
+                <h3 class="font-serif text-2xl">Acompañamiento Semanal</h3>
+                <p class="mt-2 text-lg font-semibold">899€ programa de 3 meses</p>
+
+                La opcioón más recomendada para interiorizar hábitos y avanzar con seguridad.
+
+                <ul class="mt-6 space-y-3 text-white/90">
+                Incluye:
+                    <li class="flex gap-3"><span class="mt-1.5 h-2 w-2 rounded-full bg-white/70"></span><span>Acceso completo al Método Mimara.</span>
+                    </li>
+                    <li class="flex gap-3"><span class="mt-1.5 h-2 w-2 rounded-full bg-white/70"></span><span>Seguimiento semanal por mensaje.</span>
+                    </li>
+                    <li class="flex gap-3"><span class="mt-1.5 h-2 w-2 rounded-full bg-white/70"></span><span>Ajustes y acompañamiento continuo.</span>
+                    </li>
+                </ul><br>
+                Programa de acompañamiento de 3 meses.
+                La mayoría de personas continuan hasta 9 meses para consolidar resultados.
+
+                <a
+                        href="#contacto"
+                        class="mt-8 inline-flex w-full justify-center rounded-xl bg-ink px-5 py-3 text-sm font-semibold text-white transition hover:bg-ink/90"
+                >
+                    Quiero seguimiento
+                </a>
+            </article>
+
+            <!-- Plan 3 -->
+            <article class="rounded-2xl border border-white/20 bg-white/10 p-7 text-white shadow-soft backdrop-blur-sm">
+                <h3 class="font-serif text-2xl">Sesión Estratégica 1 a 1</h3>
+                <p class="mt-2 text-lg font-semibold">120€ / sesión de 60 minutos</p>
+
+                <br>
+                Disponible exclusivamente para personas en Acompañamiento Semanal.
+                <br><br>
+                Diseñado para profundizar, ajustar y optimizar tu proceso con mayor precisión.
+
+                <a
+                        href="#contacto"
+                        class="mt-8 inline-flex w-full justify-center rounded-xl bg-white px-5 py-3 text-sm font-semibold text-mimara-primary transition hover:bg-white/90"
+                >
+                    Quiero más apoyo
+                </a>
+            </article>
+        </div>
+
+        <p class="mt-10 text-center text-sm text-white/80 max-w-3xl mx-auto">
+            *Todos los niveles comparten el mismo método. La diferencia está en el grado de acompañamiento.
+        </p>
+
+    </div>
+</section>
+
+<!-- FAQ -->
+<section class="relative overflow-hidden">
+    <div class="absolute inset-0">
+        <img src="assets/bg-faq.jpg" alt="" class="h-full w-full object-cover" loading="lazy"/>
+        <div class="absolute inset-0 bg-base/75"></div>
+    </div>
+
+    <div class="relative mx-auto max-w-4xl px-6"
+         style="padding-top: var(--section-pad); padding-bottom: var(--section-pad);">
+        <h2 class="text-center font-serif text-4xl text-ink md:text-5xl">Preguntas frecuentes</h2>
+
+        <div class="mt-10 space-y-4" id="faq">
+            <!-- Items (los mismos que tenías) -->
+            <div class="rounded-2xl border border-black/10 bg-white/70 shadow-soft backdrop-blur-sm">
+                <button class="faq-btn flex w-full items-center justify-between gap-4 p-6 text-left">
+                    <span class="text-base font-semibold text-ink">¿Qué incluye exactamente Mimara?</span>
+                    <span class="faq-icon text-2xl leading-none text-ink/60">+</span>
+                </button>
+                <div class="faq-panel hidden px-6 pb-6 text-textmain/90 leading-relaxed">
+                    Depende del plan: desde una guía estructurada para avanzar en autonomía, hasta acompañamiento
+                    integral con ajustes periódicos. En todos los casos trabajamos hábitos, nutrición y estrategia
+                    adaptada a tu contexto.
+                </div>
+            </div>
+
+            <div class="rounded-2xl border border-black/10 bg-white/70 shadow-soft backdrop-blur-sm">
+                <button class="faq-btn flex w-full items-center justify-between gap-4 p-6 text-left">
+                    <span class="text-base font-semibold text-ink">¿Necesito contar calorías o hacer dieta estricta?</span>
+                    <span class="faq-icon text-2xl leading-none text-ink/60">+</span>
+                </button>
+                <div class="faq-panel hidden px-6 pb-6 text-textmain/90 leading-relaxed">
+                    No. Buscamos estructura y flexibilidad: aprender a comer con criterios claros, sin prohibiciones
+                    y sin vivir en modo “todo o nada”.
+                </div>
+            </div>
+
+            <div class="rounded-2xl border border-black/10 bg-white/70 shadow-soft backdrop-blur-sm">
+                <button class="faq-btn flex w-full items-center justify-between gap-4 p-6 text-left">
+                    <span class="text-base font-semibold text-ink">¿Cuánto tiempo necesito para notar cambios?</span>
+                    <span class="faq-icon text-2xl leading-none text-ink/60">+</span>
+                </button>
+                <div class="faq-panel hidden px-6 pb-6 text-textmain/90 leading-relaxed">
+                    Depende de tu punto de partida, descanso, estrés y adherencia. El objetivo es un progreso
+                    sostenible: más control, menos ansiedad y resultados que se mantengan.
+                </div>
+            </div>
+
+            <div class="rounded-2xl border border-black/10 bg-white/70 shadow-soft backdrop-blur-sm">
+                <button class="faq-btn flex w-full items-center justify-between gap-4 p-6 text-left">
+                    <span class="text-base font-semibold text-ink">¿Y si tengo poco tiempo para cocinar o entrenar?</span>
+                    <span class="faq-icon text-2xl leading-none text-ink/60">+</span>
+                </button>
+                <div class="faq-panel hidden px-6 pb-6 text-textmain/90 leading-relaxed">
+                    Adaptamos el plan a tu agenda. Priorizamos acciones de alto impacto: planificación simple,
+                    recetas rápidas y entrenamiento realista para tu semana.
+                </div>
+            </div>
+
+            <div class="rounded-2xl border border-black/10 bg-white/70 shadow-soft backdrop-blur-sm">
+                <button class="faq-btn flex w-full items-center justify-between gap-4 p-6 text-left">
+                    <span class="text-base font-semibold text-ink">¿Incluye entrenamiento o solo nutrición?</span>
+                    <span class="faq-icon text-2xl leading-none text-ink/60">+</span>
+                </button>
+                <div class="faq-panel hidden px-6 pb-6 text-textmain/90 leading-relaxed">
+                    Mimara integra el enfoque completo (nutrición + movimiento + hábitos). Según el plan,
+                    puede incluir pautas generales o una estrategia más personalizada.
+                </div>
+            </div>
+
+            <div class="rounded-2xl border border-black/10 bg-white/70 shadow-soft backdrop-blur-sm">
+                <button class="faq-btn flex w-full items-center justify-between gap-4 p-6 text-left">
+                    <span class="text-base font-semibold text-ink">¿Cómo es el seguimiento y la comunicación?</span>
+                    <span class="faq-icon text-2xl leading-none text-ink/60">+</span>
+                </button>
+                <div class="faq-panel hidden px-6 pb-6 text-textmain/90 leading-relaxed">
+                    En los planes con acompañamiento revisamos avances, bloqueos y ajustes. La idea es que no
+                    estés “sola” y tengas claridad sobre qué hacer cada semana.
+                </div>
+            </div>
+
+            <div class="rounded-2xl border border-black/10 bg-white/70 shadow-soft backdrop-blur-sm">
+                <button class="faq-btn flex w-full items-center justify-between gap-4 p-6 text-left">
+                    <span class="text-base font-semibold text-ink">¿Puedo hacerlo si tengo intolerancias o condiciones médicas?</span>
+                    <span class="faq-icon text-2xl leading-none text-ink/60">+</span>
+                </button>
+                <div class="faq-panel hidden px-6 pb-6 text-textmain/90 leading-relaxed">
+                    Sí, siempre que lo planteemos con prudencia. Adaptamos alimentos, horarios y estructura a tus
+                    necesidades. Si hay patología clínica, lo ideal es coordinar con tu profesional sanitario.
+                </div>
+            </div>
+
+            <div class="rounded-2xl border border-black/10 bg-white/70 shadow-soft backdrop-blur-sm">
+                <button class="faq-btn flex w-full items-center justify-between gap-4 p-6 text-left">
+                    <span class="text-base font-semibold text-ink">¿Cómo empiezo y cuál plan me conviene?</span>
+                    <span class="faq-icon text-2xl leading-none text-ink/60">+</span>
+                </button>
+                <div class="faq-panel hidden px-6 pb-6 text-textmain/90 leading-relaxed">
+                    Escríbeme con tu objetivo y tu contexto. Si quieres autonomía y estructura: Programa Base.
+                    Si quieres acompañamiento y ajustes: Acompañamiento Integral. Si necesitas claridad puntual:
+                    Sesión 1:1.
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CONTACTO -->
+<footer id="contacto" class="bg-base">
+    <div class="mx-auto max-w-6xl px-6"
+         style="padding-top: var(--section-pad); padding-bottom: calc(var(--section-pad) * .9);">
+        <h2 class="font-serif text-4xl text-ink md:text-5xl">Hablemos de tu proceso</h2>
+
+        <div class="mt-10 grid gap-6 md:grid-cols-3">
+            <div class="rounded-2xl border border-black/10 bg-white p-6 shadow-soft">
+                <h3 class="font-serif text-2xl text-ink">Contacto</h3>
+                <p class="mt-4 text-textmain/85">
+                    <span class="font-semibold">Email:</span> hola@mimarametodo.com<br/>
+                    <span class="font-semibold">Horario:</span> Respondemos en 24-48 horas
+                </p>
+            </div>
+
+            <div class="rounded-2xl border border-black/10 bg-white p-6 shadow-soft">
+                <h3 class="font-serif text-2xl text-ink">Antes de escribir</h3>
+                <p class="mt-4 text-textmain/85 leading-relaxed">
+                    Cuéntame tu objetivo, tu contexto (trabajo, horarios, hábitos) y qué te gustaría conseguir
+                    en 12 semanas. Con eso puedo orientarte mejor.
+                </p>
+            </div>
+
+            <div class="rounded-2xl border border-black/10 bg-white p-6 shadow-soft">
+                <h3 class="font-serif text-2xl text-ink">Estamos en redes</h3>
+
+                <div class="mt-4 space-y-3 text-textmain/85">
+                    <div class="inline-flex items-center gap-3 opacity-60">
+              <span class="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-mimara-soft/45"
+                    aria-hidden="true">
+                <svg viewBox="0 0 24 24" class="h-5 w-5" fill="currentColor" aria-hidden="true">
+                  <path d="M22 12a10 10 0 1 0-11.56 9.88v-6.99H7.9V12h2.54V9.8c0-2.5 1.49-3.89 3.77-3.89
+                  1.09 0 2.23.2 2.23.2v2.46h-1.25c-1.24 0-1.62.77-1.62 1.56V12h2.76l-.44 2.89h-2.32v6.99A10 10 0 0 0 22 12z"/>
+                </svg>
+              </span>
+                        <div class="leading-tight">
+                            <div class="font-semibold text-ink">Facebook</div>
+                            <div class="text-sm text-textmain/70">Próximamente</div>
+                        </div>
+                    </div>
+
+                    <a
+                            class="inline-flex items-center gap-3 hover:underline"
+                            href="https://www.instagram.com/mimarametodo/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label="Instagram Mimara Método"
+                    >
+              <span class="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-mimara-soft/45"
+                    aria-hidden="true">
+                <svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2"
+                     aria-hidden="true">
+                  <rect x="3" y="3" width="18" height="18" rx="5" ry="5"></rect>
+                  <path d="M16 11.37a4 4 0 1 1-7.9 1.2 4 4 0 0 1 7.9-1.2z"></path>
+                  <path d="M17.5 6.5h.01"></path>
+                </svg>
+              </span>
+                        <span class="font-semibold text-ink">@mimarametodo</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="mt-10 border-t border-black/10 pt-6 text-sm text-textmain/70">
+            © <span id="year"></span> Mimara · Todos los derechos reservados
+        </div>
+    </div>
+</footer>
+
+<script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    document.querySelectorAll("#faq .faq-btn").forEach((btn) => {
+        btn.addEventListener("click", () => {
+            const panel = btn.parentElement.querySelector(".faq-panel");
+            const icon = btn.querySelector(".faq-icon");
+            const isOpen = !panel.classList.contains("hidden");
+
+            document.querySelectorAll("#faq .faq-panel").forEach((p) => p.classList.add("hidden"));
+            document.querySelectorAll("#faq .faq-icon").forEach((i) => (i.textContent = "+"));
+
+            if (!isOpen) {
+                panel.classList.remove("hidden");
+                icon.textContent = "–";
+            }
+        });
+    });
+</script>
+</body>
+</html>
